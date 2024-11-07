@@ -151,10 +151,12 @@ function bagRockScissors(userInput, computer) {
         gameOver = true; // Set gameOver flag
         gameInfo.textContent = "You reached " + bestOfGamesInt + " rounds.";
         if (playerScore < computerScore) {
+            scoreInfo.classList.remove("greenText")
             scoreInfo.classList.add("redText");
             scoreInfo.textContent = "Computer won!"
 
         } else {
+            scoreInfo.classList.remove("redText")
             scoreInfo.classList.add("greenText");
             scoreInfo.textContent = "Player Won!"
         }
