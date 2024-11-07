@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <header class="header-container"><h1>Rock paper scissors</h1></header>
+    <main class="main-container">
+      <p id="gameInfo"></p>
+      <p id="scoreInfo" class="scoreInfoSize"></p>
+      <p class="p-Info">
+        PLAYER: <strong class="greenText" id="playerScoreDisplay"></strong>
+      </p>
+      <p class="p-Info">
+        COMPUTER:
+        <strong class="redText" id="computerScoreDisplay"></strong>
+      </p>
+      <p id="gameInfoDisplay"></p>
+
+      <label for="bestOfGames" id="chooseGames">Choose how many games</label>
+      <select id="bestOfGames">
+        <option selected>Choose amount</option>
+        <option value="3">Best of 3</option>
+        <option value="5">Best of 5</option>
+      </select>
+      <button id="startGame">Start Game</button>
+      <p id="results"></p>
+      <section id="sectionContainer" class="section-container">
+        <figcaption>
+          <img id="bag" src="images/colorful_bag_icon.png" alt="" />
+          <p>Bag</p>
+        </figcaption>
+        <figcaption>
+          <img id="rock" src="images/colorful_rock_icon.png" alt="" />
+          <p>Rock</p>
+        </figcaption>
+        <figcaption>
+          <img id="scissors" src="images/colorful_scissors_icon.png" alt="" />
+          <p>Scissors</p>
+        </figcaption>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
