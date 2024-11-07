@@ -62,9 +62,6 @@ body {
       align-items: center;
       justify-content: center;
       figcaption {
-        &:active {
-          border: 2px solid white;
-        }
         &:hover {
           cursor: pointer;
           background-color: rgba(104, 104, 104, 0.993);
