@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+body {
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  word-spacing: 0.15rem;
+  color: white;
+  background-color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  main {
+    .scoreInfoSize {
+      font-size: 3.5rem;
+    }
+    .redText {
+      color: red;
+    }
+    .greenText {
+      color: green;
+    }
+    .p-Info {
+      font-size: 3rem;
+    }
+    .Hide {
+      display: none;
+    }
+
+    .HideSection {
+      visibility: hidden;
+      :hover {
+        cursor: default;
+      }
+    }
+
+    p {
+      text-shadow: 1px 1px 4px black;
+    }
+    text-align: center;
+    select {
+      border-radius: 10px;
+      size: 30px;
+      box-shadow: 1px 1px 8px black;
+    }
+    section {
+      margin-top: 2rem;
+      flex-grow: 1;
+      margin-inline: auto;
+      width: 75%;
+      border: 1px solid black;
+      border-radius: 250px;
+      box-shadow: 1px 1px 8px black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      figcaption {
+        &:active {
+          border: 2px solid white;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(104, 104, 104, 0.993);
+          box-shadow: 1px 1px 8px black;
+          border-radius: 10px;
+        }
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        height: auto;
+        p {
+          font-size: 2rem;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
