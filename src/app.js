@@ -1,5 +1,5 @@
-// Get elements for each choice (bag, rock, scissors)
-const inputBag = document.getElementById("bag");
+// Get elements for each choice (paper, rock, scissors)
+const inputpaper = document.getElementById("paper");
 const inputRock = document.getElementById("rock");
 const inputScissors = document.getElementById("scissors");
 
@@ -16,14 +16,14 @@ const bestOfGames = document.getElementById("bestOfGames");
 const gameInfoDisplay = document.getElementById("gameInfoDisplay");
 
 startGame.disabled = true;
+let gameOver = false;
 let isStarted = false;
 let gameRounds = 0;
 let playerScore = 0;
 let computerScore = 0;
 let bestOfGamesInt = 0;
-let gameOver = false;
 
-console.log();
+
 
 // Hide the section initially
 sectionContainer.classList.add("HideSection");
@@ -83,7 +83,7 @@ function resetMyClick() {
 // Update the game info and call the game function
 function updateGameInfo(playerChoice, choice) {
     gameInfoDisplay.textContent = playerChoice;
-    bagRockScissors(choice, generateComputerChoice());
+    paperRockScissors(choice, generateComputerChoice());
 }
 
 // Update number of games selected
@@ -101,9 +101,9 @@ bestOfGames.addEventListener('input', () => {
 });
 
 // Handle player choices
-inputBag.addEventListener('click', () => {
+inputpaper.addEventListener('click', () => {
     if (gameRounds < bestOfGamesInt && !gameOver) {
-        updateGameInfo("You clicked Bag!", "bag");
+        updateGameInfo("You clicked Paper!", "paper");
     }
 });
 
@@ -121,19 +121,19 @@ inputScissors.addEventListener('click', () => {
 
 // Function to randomly choose for the computer
 function generateComputerChoice() {
-    const computerChoice = ["bag", "rock", "scissors"];
+    const computerChoice = ["paper", "rock", "scissors"];
     const randomIndex = Math.floor(Math.random() * computerChoice.length);
     return computerChoice[randomIndex];
 }
 
 // Function to determine the game result based on user and computer choices
-function bagRockScissors(userInput, computer) {
+function paperRockScissors(userInput, computer) {
     if (userInput === computer) {
         gameInfoDisplay.textContent = "It's a tie!";
     } else if (
-        (userInput === "bag" && computer === "rock") ||
+        (userInput === "paper" && computer === "rock") ||
         (userInput === "rock" && computer === "scissors") ||
-        (userInput === "scissors" && computer === "bag")
+        (userInput === "scissors" && computer === "paper")
     ) {
         gameInfoDisplay.textContent = "You won! You chose " + userInput + " and the computer chose " + computer;
         gameRounds++;
