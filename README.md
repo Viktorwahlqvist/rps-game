@@ -1,3 +1,4 @@
+![image](https://github.com/Viktorwahlqvist/rps-game/blob/main/images/Sk%C3%A4rmbild%202025-02-03%20154050.png?raw=true)
 # Rock Paper Scissors Game
 
 A simple implementation of the classic Rock, Paper, Scissors game. This game allows the user to play against the computer and make a choice between Rock, Paper, or Scissors. The game determines the winner based on traditional rules.
